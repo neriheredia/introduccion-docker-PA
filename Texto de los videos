@@ -27,3 +27,21 @@ Video 1
 - PORTS: Se muestra el port maping, en este caso se esta mapeando el localhost:27017 al que corre interno en la imagen en el puerto 27017.
 - NAMES: Nombre que definimos de esta instancia, tener en cuenta que si no se le pasa el parametro --name, docker asignara un nombre a la instancía.
 
+ Video 5
+ - Aqui accedemos al proceso de la nueva instancia de docker. Recuerden que estos es un proceso de linux, así que basicamente es como ingresar a una consola de linux.
+
+ - docker exec -it <nombre de la instancia> bash
+
+ exec: Seria como decir docker ejecuta
+ -it: En el modo iterativo
+ <instacia de la imagen>: Se puede utilizar tanto el nombre de la instacia, como el Container ID para hacer referencia del mismo.
+ bash: Se refiere a la consola bash que utiliza por defecto linux.
+
+ Video 6
+ -Aqui en el siguiente video, se muestra como es el proceso de la instacia creada y la diferencia entre un container y su propia pc.
+
+Si prestan atención cuando estamos dentro de la instacía, usamos el comando mongo --version haciendo referencia a que tenemos instalado mongodb en ese proceso, y nos responde correctamente ya que dentro de ese contenedor realmente esta instalado mongodb. Para que quede claro, se abre aparte otra terminal y esta muestra que si realizamos el mismo comando, nos marca un error, ya que esto esta pasando por fuera de nuestra PC.
+
+Video 7
+-Aqui utilizamos Ctrl + c para frenar el contenedor corriendo, y ejecutamos el comando docker ps para ver que efectivamente se freno el proceso de docker.
+
