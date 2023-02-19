@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+    />
+
+    <title>reveal.js</title>
+
+    <link rel="stylesheet" href="dist/reset.css" />
+    <link rel="stylesheet" href="dist/reveal.css" />
+    <link rel="stylesheet" href="dist/theme/black.css" />
+
+    <!-- Theme used for syntax highlighted code -->
+    <link rel="stylesheet" href="plugin/highlight/monokai.css" />
+  </head>
+  <body>
+    <div class="reveal">
+      <div class="slides">
+        <section data-background-color="#f2f2f2">
+          <img
+            src="./assets/images/LogoProgramadoresArgentina.png"
+            width="900"
+            height="500"
+          />
+        </section>
+        <section>
+          <h1 class="r-fit-text" style="color: #029bc6">PRESENTANDO</h1>
+          <img
+            class="fragment fade-up"
+            src="./assets/images/docker.png"
+            width="300"
+            height="300"
+          />
+        </section>
+        <section>
+          <h4 class="r-fit-text" style="color: #029bc6">¿Que es Docker?</h4>
+          <hr class="fragment show-notes" />
+          <p class="r-fit-text fragment show-notes">
+            Docker es un sistema operativo (o runtime) para contenedores.<br />
+            El motor de Docker se instala en cada servidor en el que desee
+            ejecutar contenedores y proporciona un conjunto sencillo de comandos
+            que puede utilizar para crear, iniciar o detener contenedores.
+          </p>
+        </section>
+        <section>
+          <h4 class="r-fit-text" style="color: #029bc6">
+            ¿Para que se utiliza Docker?
+          </h4>
+          <hr class="fragment show-notes" />
+          <p class="r-fit-text fragment show-notes">
+            Docker es una plataforma de contenedores que permite a los
+            desarrolladores empaquetar y distribuir aplicaciones de manera
+            eficiente y segura.<br />
+            Los contenedores aislan los componentes de la aplicación y
+            garantizan que funcionen de manera consistente en cualquier
+            entorno.<br />
+            Docker también facilita la automatización del despliegue de
+            aplicaciones y la colaboración entre equipos de desarrollo a través
+            de imágenes de contenedor compartidas.
+          </p>
+        </section>
+        <section>
+          <h4 class="r-fit-text" style="color: #029bc6">
+            ¿Contenedores e Imagenes?
+          </h4>
+          <hr class="fragment show-notes" />
+          <p class="r-fit-text fragment show-notes">
+            Un contenedor es una instancia de una imagen de Docker que se está
+            ejecutando. Una imagen de Docker es un paquete que contiene todo lo
+            que una aplicación necesita para funcionar, incluyendo el código
+            fuente, las bibliotecas, los archivos de configuración, y más.<br />
+            Las imágenes se crean a partir de un archivo de configuración
+            llamado Dockerfile, que específica los componentes que deben
+            incluirse en la imagen. Una vez creada una imagen, puede ser
+            descargada y ejecutada en cualquier máquina que tenga Docker
+            instalado. Al ejecutar una imagen, se crea un contenedor que es una
+            instancia única de esa imagen.<br />
+            En resumen, una imagen de Docker es un paquete estático que contiene
+            todo lo que una aplicación necesita para funcionar, mientras que un
+            contenedor es una instancia en ejecución de esa imagen
+          </p>
+        </section>
+        <section>
+          <h6 class="r-fit-text" style="color: #029bc6">
+            ¿De donde descargo Docker?
+          </h6>
+          <hr class="fragment show-notes" />
+          <p class="r-fit-text fragment show-notes">
+            Lo encontraremos en la pagina oficial de docker.<br />La forma de
+            instalación, va a depender del sistema operativo de su
+            computador.<br />
+            Por favor seguir las indicaciónes de la documentación oficial.
+          </p>
+          <hr class="fragment show-notes" />
+          <a
+            class="fragment show-notes"
+            style="color: #029bc6"
+            href="https://www.docker.com/"
+            target="_blank"
+            rel="noreferrer"
+            >En el siguiente link</a
+          >
+        </section>
+        <section>
+          <h6 class="r-fit-text">Docker esencial para desarrolladores</h6>
+          <hr class="fragment show-notes" />
+          <p class="r-fit-text fragment show-notes">
+            Ahora veremos de forma practica como utilizar docker.<br />
+            Para ello, vamos a descargar una imagen de docker, y vamos a
+            ejecutarla en nuestro computador.
+          </p>
+        </section>
+        <section>
+          <h6 class="r-fit-text">
+            La imagenes se pueden crear, como también descargar desde la nube
+          </h6>
+          <p class="r-fit-text fragment show-notes">
+            Aqui les dejo el link de DockerHub, donde podran encontrar muchas
+            imagenes para descargar.
+            <a
+              class="fragment show-notes"
+              style="color: #029bc6"
+              href="https://hub.docker.com/search?q="
+              target="_blank"
+              rel="noreferrer"
+              >Docker-Hub</a
+            >
+          </p>
+        </section>
+        <section>
+          <section>
+            <h6>Descargando una imagen de docker</h6>
+            <video
+              data-autoplay
+              src="./assets/video/DESCARGAR_UNA_IMAGEN_CON_DOCKER.mp4"
+            ></video>
+          </section>
+          <section>
+            <h6>Consultando las imagenes descargadas</h6>
+            <video
+              data-autoplay
+              src="./assets/video/CONSULTA_RIMAGENES.mp4"
+            ></video>
+          </section>
+          <section>
+            <h6>Correr una imagen</h6>
+            <video
+              data-autoplay
+              src="./assets/video/CORRER_UNA_IMAGEN.mp4"
+            ></video>
+          </section>
+          <section>
+            <h6>Correr imagen con parametros y docker ps</h6>
+            <video
+              data-autoplay
+              src="./assets/video/CORRER_IMAGEN_CON_PARAMETROS.mp4"
+            ></video>
+          </section>
+        </section>
+      </div>
+    </div>
+
+    <script src="dist/reveal.js"></script>
+    <script src="plugin/notes/notes.js"></script>
+    <script src="plugin/markdown/markdown.js"></script>
+    <script src="plugin/highlight/highlight.js"></script>
+    <script>
+      // More info about initialization & config:
+      // - https://revealjs.com/initialization/
+      // - https://revealjs.com/config/
+      Reveal.initialize({
+        hash: true,
+        autoPlayMedia: true,
+        // Learn about plugins: https://revealjs.com/plugins/
+        plugins: [RevealMarkdown, RevealHighlight, RevealNotes],
+      });
+    </script>
+  </body>
+</html>

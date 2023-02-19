@@ -1,0 +1,29 @@
+Video 1
+ - En este video vemos como se descarga una imagen, con un comando muy simple. En este caso es docker pull <nombre de la imagen>. En este ejemplo vemos como se esta descargando una imagen de una base de datos de Postgres.
+ 
+ Video 2
+ - En este video podemos ver todas las imagenes que tenemos descargadas, y podemos apreciar que se descargo con exito la base de datos postgres.
+ 
+ Video 3
+ - En este ejemplo vemos como con el comando "docker ps" revisamos que no se esta corriendo ninguna instancia de docker. Luego se procede con el comando "docker run <nombre de la imagen> en este caso usamos una imagen de mongo  y ejecutamos. ("usamos esta imagen para el ejemplo ya que no requiere una configuración de variables de entorno")
+ 
+ Video 4
+ - En ese video vemos como se esta corriendo la misma imagenes pero con unos parametros mas.
+ docker run --rm --name projectada -p 27017:27017 <nombre de la imagen>
+ 
+ - run: Comando que corre la imagen, en caso de no tener descargada la imagen la descargar y recien la ejecuta.
+ - --rm: una vez que se frene el container, se frena el proceso que se esta ejecutando.
+ - --name: es para renombrar una imagen con otro nombre que deseemos, ya que podriamos tener varias instancias de la misma imagen. En este caso la estamos nombrando con el nombre de projectada.
+ - -p: Esto es para definir el puerto donde va a correr nuestra instancia en nuestro host. La imagen de mongo esta creada y corre internamente en el puerto 27017 parametro que esta a la derecha de los dos puntos. Y lo que estamos haciendo es que le estamos asignando el mismo puerto pero de nuestro host. Entonces quedaria corriendo en http://127.0.0.1:27017  o también conocido como http://localhost:27017.
+
+- Una vez que el contenedor esta corriendo, abrimos otra termial y ejecutamos el comando docker ps. Lo que hace este comando, es mostrarnos las instancias que tenemos corriendo con nuestro docker.
+
+- CONTAINER ID: Es el id que se genera cuando se corre una nueva instancia de una imagen o se crea un container nuevo.
+
+- IMAGE: Nombre de la imagen y la versión de la misma.
+- COMMAND: Define que fichero se lanzara cuando arranque el contenedor.
+- CREATED: Cuando fue creado.
+- STATUS: Si esta levantado y hace cuanto esta corriendo.
+- PORTS: Se muestra el port maping, en este caso se esta mapeando el localhost:27017 al que corre interno en la imagen en el puerto 27017.
+- NAMES: Nombre que definimos de esta instancia, tener en cuenta que si no se le pasa el parametro --name, docker asignara un nombre a la instancía.
+
